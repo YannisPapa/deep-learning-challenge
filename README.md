@@ -3,6 +3,7 @@
 This is my submission for Module 21 Challenge with Berkeley Data Analytics Boot Camp.
 
 Running `charity_deep_learning.ipynb` will give you a notebook that uses a Neural Netowrk to create a binary classifier to predict whether applicants will be successful if funded by Alphabet Soup. The model from this notebook will be saved as `AlphabetSoupCharity.h5`.
+
 Running `AlphabetSoupCharity_Optimization.ipynb` will give you a more optimized version of the previous notebook with a higher accuracy. The model from this notebook will be saved as `AlphabetSoupCharity_Optimization.h5`.
 
 ## Overview of the analysis:
@@ -12,22 +13,29 @@ The purpose of this analysis was to evaluate a Neaural Network to predict whethe
 ## Results:
 
 ### Data Preprocessing:
-* What variable(s) are the target(s) for your model? `IS_SUCCESSFUL` is the target variable.
-* What variable(s) are the features for your model? `NAME`,`APPLICATION_TYPE`,`AFFILIATION`,`CLASSIFICATION`,`USE_CASE`,`ORGANIZATION`,`STATUS`,`INCOME_AMT`,`SPECIAL_CONSIDERATIONS`,`ASK_AMT`,`IS_SUCCESSFUL` are all used as features in building the model.
-* What variable(s) should be removed from the input data because they are neither targets nor features? `EIN` is the only varibale not used in the model.
+* What variable(s) are the target(s) for your model?
+  
+  `IS_SUCCESSFUL` is the target variable.
+* What variable(s) are the features for your model?
+
+  `NAME`,`APPLICATION_TYPE`,`AFFILIATION`,`CLASSIFICATION`,`USE_CASE`,`ORGANIZATION`,`STATUS`,`INCOME_AMT`,`SPECIAL_CONSIDERATIONS`,`ASK_AMT`,`IS_SUCCESSFUL` are all used as features in building the model.
+* What variable(s) should be removed from the input data because they are neither targets nor features?
+
+  `EIN` is the only varibale not used in the model.
 
 ### Compiling, Training, and Evaluating the Model:
 * How many neurons, layers, and activation functions did you select for your neural network model, and why?
     * I used a total of 4 layers (1 input, 2 hidden, 1 output)
     * 16(input layer), 8(first hidden), 4(second hidden), 1(output layer) were the number of neurons used
     * I used `relu` for the input layers and the 2 hidden layer, and `sigmoid` for the ouput layer activation functions
+    
     All of these were chosen after testing with different layer amounts and neuron amounts
 * Were you able to achieve the target model performance?
-    * Starting performance after final layer, neurons, and activation function chocies (`.728`):
+    * Starting performance after final layer, neurons, and activation function chocies (`.7288`):
         ![First Change](https://github.com/YannisPapa/deep-learning-challenge/blob/main/images/base_file.PNG?raw=true)
-    * Performance after reducing amount of buckets for `INCOME_AMT` by puting ones with less than a certain amount into 'Other' (`.729`):
+    * Performance after reducing amount of buckets for `INCOME_AMT` by puting ones with less than a certain amount into 'Other' (`.7289`):
         ![Second Change](https://github.com/YannisPapa/deep-learning-challenge/blob/main/images/after_income_buckets.PNG?raw=true)
-    * Performance after reducing amount of buckets for `NAME` by puting ones with less than a certain amount into 'Other' (`.792`):
+    * Performance after reducing amount of buckets for `NAME` by puting ones with less than a certain amount into 'Other' (`.7921`):
         ![Third Change](https://github.com/YannisPapa/deep-learning-challenge/blob/main/images/after_income_name_buckets.PNG?raw=true)
 * What steps did you take in your attempts to increase model performance?
     * First i took some time to try different settings for number of layers and neurons and differnt fuction types.
