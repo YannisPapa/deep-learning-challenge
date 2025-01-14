@@ -26,7 +26,7 @@ The purpose of this analysis was to evaluate a Neaural Network to predict whethe
     * Starting performance after final layer, neurons, and activation function chocies (`.728`):
         ![First Change](https://github.com/YannisPapa/deep-learning-challenge/blob/main/images/base_file.PNG?raw=true)
     * Performance after reducing amount of buckets for `INCOME_AMT` by puting ones with less than a certain amount into 'Other' (`.729`):
-        ![Second Change](images\after_income_buckets.PNG)
+        ![Second Change](https://github.com/YannisPapa/deep-learning-challenge/blob/main/images/after_income_buckets.PNG?raw=true)
     * Performance after reducing amount of buckets for `NAME` by puting ones with less than a certain amount into 'Other' (`.792`):
         ![Third Change](images\after_income_name_buckets.PNG)
 * What steps did you take in your attempts to increase model performance?
